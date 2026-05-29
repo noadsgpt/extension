@@ -1,0 +1,66 @@
+/*
+ * NoAdsGPT - CSS Ad Blocker Rules
+ * Hides sponsored content and ad units from ChatGPT interface.
+ * 
+ * ChatGPT ads appear as "Sponsored" cards below responses.
+ * They are rendered as tinted boxes with advertiser branding,
+ * headlines, descriptions, and images.
+ *
+ * This CSS targets known ad containers and sponsored elements.
+ * Updated: May 2026
+ */
+
+/* Sponsored ad cards - the tinted box containers */
+[data-testid*="sponsored"],
+[data-testid*="ad-unit"],
+[data-testid*="ad_unit"],
+[data-testid*="advertiser"] {
+  display: none !important;
+}
+
+/* Sponsored label and ad card wrappers */
+[class*="sponsored"],
+[class*="Sponsored"] {
+  display: none !important;
+}
+
+/* Ad unit containers rendered after responses */
+[data-message-author-role="assistant"] + [data-ad],
+[data-message-author-role="assistant"] ~ [data-testid*="ad"] {
+  display: none !important;
+}
+
+/* Bazaar CDN ad images and assets */
+img[src*="bzrcdn.openai.com"] {
+  display: none !important;
+}
+
+/* Single and multi advertiser ad unit containers */
+[class*="single_advertiser"],
+[class*="multi_advertiser"],
+[class*="ad-carousel"],
+[class*="ad_carousel"],
+[class*="carousel-card"][class*="sponsor"] {
+  display: none !important;
+}
+
+/* Generic sponsored content patterns in ChatGPT */
+div[class*="adUnit"],
+div[class*="ad-unit"],
+div[class*="AdUnit"],
+section[class*="sponsor"],
+aside[class*="sponsor"] {
+  display: none !important;
+}
+
+/* Hide "Sponsored" text labels */
+span:has(+ a[href*="utm_medium=cpc"]),
+a[href*="utm_source=chatgpt"][href*="utm_medium=cpc"] {
+  display: none !important;
+}
+
+/* Ad container that wraps the tinted box */
+div[style*="background"]:has(> [class*="sponsor"]),
+div[style*="background"]:has(a[href*="utm_medium=cpc"]) {
+  display: none !important;
+}

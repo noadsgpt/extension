@@ -1,0 +1,19 @@
+# Build artifacts
+*.zip
+*.crx
+*.xpi
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node (if ever needed)
+node_modules/
+package-lock.json

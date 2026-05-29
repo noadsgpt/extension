@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOADSGPT</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="app">
+    <!-- Header -->
+    <div class="header">
+      <div class="header-background"></div>
+      <div class="logo">
+        <div class="logo-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M16 4L6 9V16C6 22.5 10.5 28.5 16 30C21.5 28.5 26 22.5 26 16V9L16 4Z" fill="white" opacity="0.95"/>
+            <path d="M12 16L14 18L20 12" stroke="#00a884" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <h1>NOADSGPT</h1>
+          <span class="version">v1.1.0</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Status Card -->
+    <div class="card status-card">
+      <div class="status-header">
+        <div class="status-info">
+          <div class="status-indicator" id="statusIndicator"></div>
+          <span class="status-text" id="statusText">Protection Active</span>
+        </div>
+        <div class="toggle-switch">
+          <input type="checkbox" id="toggleProtection" checked>
+          <label for="toggleProtection"></label>
+        </div>
+      </div>
+      <p class="status-description" id="statusDescription">Blocking ads on ChatGPT</p>
+    </div>
+
+    <!-- Stats Card -->
+    <div class="card stats-card">
+      <div class="card-header">
+        <h2 class="card-title">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="title-icon">
+            <path d="M8 0L3 4V8C3 11.5 5.5 14.5 8 15C10.5 14.5 13 11.5 13 8V4L8 0Z" fill="currentColor" opacity="0.8"/>
+          </svg>
+          Statistics
+        </h2>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-box">
+          <div class="stat-icon-wrapper">
+            <div class="stat-icon stat-icon-block">🚫</div>
+          </div>
+          <div class="stat-content">
+            <div class="stat-value" id="adsBlocked">0</div>
+            <div class="stat-label">Ads Blocked</div>
+          </div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-icon-wrapper">
+            <div class="stat-icon stat-icon-time">⏱️</div>
+          </div>
+          <div class="stat-content">
+            <div class="stat-value" id="timeSaved">0</div>
+            <div class="stat-label">Minutes Saved</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Info Card -->
+    <div class="card info-card">
+      <div class="info-icon">🛡️</div>
+      <div class="info-content">
+        <p>Blocking sponsored content, ad cards, and tracking requests on ChatGPT. No data leaves your browser.</p>
+      </div>
+    </div>
+
+    <!-- Buy Me a Coffee -->
+    <div class="card coffee-card">
+      <div class="coffee-content">
+        <div class="coffee-icon">☕</div>
+        <div class="coffee-text">
+          <h3>Enjoying this extension?</h3>
+          <p>Support the developer with a coffee!</p>
+        </div>
+      </div>
+      <a href="https://buymeacoffee.com/ridoway" target="_blank" class="coffee-button" id="coffeeButton">
+        <span>Buy me a coffee</span>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Landing Page Link -->
+    <div class="card landing-card">
+      <a href="https://noadsgpt.online" target="_blank" class="landing-link" id="landingLink">
+        <div class="landing-icon">🌐</div>
+        <div class="landing-text">
+          <h3>Visit NOADSGPT.ONLINE</h3>
+          <p>Learn more about this extension</p>
+        </div>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="footer-links">
+        <a href="#" id="settingsLink">Settings</a>
+        <span class="separator">•</span>
+        <a href="#" id="aboutLink">About</a>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
+
